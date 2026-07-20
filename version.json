@@ -1,5 +1,6 @@
 {
-  "version": "1.0.2-1807-1040",
-  "sha256": "a5c56eb524dab0d22314f8d0c54c9d4c71e37c9c4b76d27282a0e94834906808",
-  "download_url": "https://raw.githubusercontent.com/drswapnil/ParshwaEMR-Releases/main/bin/Parshwa_EMR.exe"
+  "version": "1.0.2-2007-1800",
+  "sha256": "c55ba3a467d1e0aa8f51493d406750c25572433c41e028de3d356e8423aeec28",
+  "download_url": "https://raw.githubusercontent.com/drswapnil/ParshwaEMR-Releases/main/bin/Parshwa_EMR.exe",
+  "installer_url": "https://github.com/drswapnil/ParshwaEMR-Releases/raw/refs/heads/main/installer_output/ParshwaEMR-Setup-1.0.2-2007-1800.exe"
 }

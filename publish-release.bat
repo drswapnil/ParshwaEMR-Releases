@@ -67,4 +67,24 @@ echo ========================================================
 echo   [SUCCESS] Release %VERSION% is now live!
 echo ========================================================
 echo.
+
+REM Extract and display the installer download link from version.json
+set "INSTALLER_URL="
+for /f "tokens=2 delims=:," %%a in ('findstr "installer_url" version.json') do (
+    set "raw=%%a"
+    REM Strip spaces and quotes — handle the https: part split across tokens
+    set "raw=!raw: =!"
+    set "raw=!raw:"=!"
+)
+REM Reconstruct full URL (findstr splits on : so we need a different approach)
+for /f "tokens=* delims=" %%a in ('python -c "import json; d=json.load(open('version.json')); print(d.get('installer_url','NOT FOUND'))"') do set "INSTALLER_URL=%%a"
+
+echo ========================================================
+echo   SHAREABLE INSTALLER DOWNLOAD LINK:
+echo.
+echo   !INSTALLER_URL!
+echo.
+echo   Send this link to clients to download the installer.
+echo ========================================================
+echo.
 pause
